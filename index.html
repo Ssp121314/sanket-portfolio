@@ -6,177 +6,427 @@
     <title>Sanket Pophale – Digital Marketing Portfolio</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --primary: #5b5df5;
+            --primary-dark: #4748c9;
+            --bg: #f5f6fb;
+            --card-bg: #ffffff;
+            --text-main: #1f2933;
+            --text-muted: #6b7280;
+            --border-light: #e5e7f3;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #eef1ff, #e0e7ff, #edf2ff);
-            color: #222;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
         }
 
-        header {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #5a60f5, #8b4df9);
-            color: white;
-            border-bottom-left-radius: 40px;
-            border-bottom-right-radius: 40px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 42px;
-            font-weight: 700;
-        }
-
-        h2 {
-            color: #4a4a4a;
-            font-size: 26px;
-            border-left: 5px solid #6c63ff;
-            padding-left: 10px;
-            margin-bottom: 10px;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 900px;
-            margin: auto;
-            padding: 40px 0;
-        }
-
-        .section {
-            background: white;
-            padding: 25px 30px;
-            border-radius: 14px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            transition: 0.3s ease;
-        }
-
-        .section:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-        }
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 12px;
-            margin-top: 15px;
-        }
-
-        .skill-box {
-            background: #f5f4ff;
-            padding: 12px 15px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 15px;
-            font-weight: 600;
-            border: 1px solid #e3e1ff;
-            transition: 0.3s ease;
-        }
-
-        .skill-box:hover {
-            background: #e9e7ff;
-            transform: scale(1.05);
-        }
-
-        a.button {
-            display: inline-block;
-            padding: 14px 26px;
-            background: #6c63ff;
-            color: white;
-            border-radius: 8px;
+        a {
+            color: var(--primary);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: 0.3s ease;
         }
 
-        a.button:hover {
-            background: #5b54e6;
-            transform: scale(1.05);
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Top hero section */
+
+        .hero {
+            background: radial-gradient(circle at top left, #8b5cf6 0, #4f46e5 40%, #312e81 100%);
+            color: #fff;
+            padding: 60px 20px 80px;
+        }
+
+        .hero-inner {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 38px;
+            font-weight: 700;
+            margin: 0 0 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0 0 20px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.16);
+            margin-bottom: 12px;
+        }
+
+        .hero-text {
+            font-size: 14px;
+            max-width: 520px;
+            color: #e5e7ff;
+        }
+
+        .hero-actions {
+            margin-top: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .btn-primary, .btn-outline {
+            display: inline-block;
+            padding: 11px 20px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid transparent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: #f9fafb;
+            color: #111827;
+        }
+
+        .btn-primary:hover {
+            background: #e5e7eb;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #e5e7ff;
+            border-color: rgba(229,231,255,0.7);
+        }
+
+        .btn-outline:hover {
+            background: rgba(17,24,39,0.18);
+        }
+
+        .hero-side-card {
+            background: rgba(15,23,42,0.28);
+            border-radius: 18px;
+            padding: 18px 18px 16px;
+            border: 1px solid rgba(148,163,255,0.5);
+        }
+
+        .hero-side-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #e5e7ff;
+        }
+
+        .hero-side-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-bottom: 4px;
+            color: #e5e7ff;
+        }
+
+        /* Main layout */
+
+        .page {
+            max-width: 1050px;
+            margin: -40px auto 40px;
+            padding: 0 20px 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+            gap: 24px;
+        }
+
+        .section-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 24px 24px 22px;
+            box-shadow: 0 18px 45px rgba(15,23,42,0.04);
+            border: 1px solid var(--border-light);
+            margin-bottom: 22px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 6px;
+        }
+
+        .section-subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin: 0 0 16px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(130px,1fr));
+            gap: 10px;
+        }
+
+        .skill-pill {
+            padding: 8px 10px;
+            border-radius: 999px;
+            border: 1px solid #e5e7f0;
+            font-size: 13px;
+            text-align: center;
+            background: #f9fafb;
+        }
+
+        .experience-item {
+            margin-bottom: 12px;
+        }
+
+        .experience-role {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .experience-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .experience-text {
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .link-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 13px;
+        }
+
+        .link-list li {
+            margin-bottom: 8px;
+        }
+
+        .pill-small {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: #eef2ff;
+            color: #3730a3;
+            font-size: 11px;
+            margin-left: 6px;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            background: #ecebff;
-            margin-top: 40px;
-            font-size: 14px;
+            padding: 16px;
+            font-size: 12px;
+            color: var(--text-muted);
         }
 
-        p {
-            font-size: 16px;
+        @media (max-width: 850px) {
+            .hero-inner {
+                grid-template-columns: minmax(0,1fr);
+            }
+            .page {
+                margin-top: -24px;
+            }
+            .grid {
+                grid-template-columns: minmax(0,1fr);
+            }
         }
     </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Sanket Pophale</h1>
-    <p>Junior Digital Marketer | Social Media • SEO • Email • CRM | Dublin, Ireland</p>
-</header>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div>
+                <div class="hero-badge">Digital Marketing · Entry Level · Ireland</div>
+                <h1 class="hero-title">Sanket Pophale</h1>
+                <p class="hero-subtitle">Junior Digital Marketer focused on Social, SEO, Email, CRM and Analytics.</p>
+                <p class="hero-text">
+                    MBA Marketing graduate with hands-on experience supporting campaigns for SaaS, non-profit and retail brands.
+                    I combine content execution with data-driven thinking across social media, email, CRM workflows and performance tracking.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn-primary" href="https://awake-muenster-42d.notion.site/Marketing-Portfolio-Sanket-Pophale-2c21c52c97fc80da9f2ccc1a41f5a48b" target="_blank">View Full Portfolio</a>
+                    <a class="btn-outline" href="https://www.linkedin.com/in/sanketp99/" target="_blank">Open LinkedIn Profile</a>
+                </div>
+            </div>
 
-<div class="container">
-
-    <div class="section">
-        <h2>About Me</h2>
-        <p>
-            Entry-level digital marketer with hands-on experience in social media, SEO, CRM workflows, 
-            email marketing, and analytics. Skilled in campaign execution, content creation, and 
-            performance reporting. Actively seeking Marketing Assistant / Digital Marketing Executive 
-            roles across Ireland.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>Key Skills</h2>
-        <div class="skills">
-            <div class="skill-box">Digital Marketing</div>
-            <div class="skill-box">Social Media Marketing</div>
-            <div class="skill-box">Email Marketing</div>
-            <div class="skill-box">SEO</div>
-            <div class="skill-box">Google Analytics (GA4)</div>
-            <div class="skill-box">CRM (HubSpot)</div>
-            <div class="skill-box">Content Creation</div>
-            <div class="skill-box">Google Ads</div>
-            <div class="skill-box">Meta Ads</div>
-            <div class="skill-box">Power BI</div>
+            <aside class="hero-side-card">
+                <div class="hero-side-title">At a glance</div>
+                <div class="hero-side-item">
+                    <span>Location</span>
+                    <span>Dublin, Ireland</span>
+                </div>
+                <div class="hero-side-item">
+                    <span>Visa</span>
+                    <span>Stamp 1G – Full-time</span>
+                </div>
+                <div class="hero-side-item">
+                    <span>Focus</span>
+                    <span>Social · Email · SEO · CRM</span>
+                </div>
+                <div class="hero-side-item">
+                    <span>Portfolio</span>
+                    <span>SaaS + Creative Work</span>
+                </div>
+            </aside>
         </div>
-    </div>
+    </section>
 
-    <div class="section">
-        <h2>Portfolio</h2>
-        <p>View my full marketing portfolio including content calendar, email marketing sample, and SaaS strategy:</p>
-        <a class="button" href="YOUR_NOTION_LINK_HERE" target="_blank">Open Portfolio</a>
-    </div>
+    <!-- MAIN CONTENT -->
+    <main class="page">
 
-    <div class="section">
-        <h2>Experience</h2>
-        <p><strong>MyImmune – Marketing Consultant</strong> • CRM workflows, SEO updates, content creation.</p>
-        <p><strong>ISKCON Dublin – Digital Marketing Intern</strong> • Google Ads Grants optimisation, keyword refinement.</p>
-        <p><strong>STUVALLEY – Digital Marketing Intern</strong> • SEO, SEM, paid campaigns, analytics dashboards.</p>
-        <p><strong>FMI / Circle K / Aramark</strong> • Customer insights, merchandising, promotional execution.</p>
-    </div>
+        <div class="grid">
 
-    <div class="section">
-        <h2>Contact</h2>
-        <p>Email: <strong>sanket.pophale99@gmail.com</strong></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/sanketp99" target="_blank">linkedin.com/in/sanketp99</a></p>
-        <p>Dublin, Ireland</p>
-    </div>
+            <!-- LEFT COLUMN -->
+            <div>
 
-</div>
+                <section class="section-card">
+                    <h2 class="section-title">About</h2>
+                    <p class="section-subtitle">Who I am and what I bring to a marketing team.</p>
+                    <p style="font-size:14px;">
+                        I am an entry-level digital marketer with experience across social media management, SEO, email marketing,
+                        CRM workflows (HubSpot) and marketing analytics. Through roles at MyImmune, ISKCON Dublin and STUVALLEY,
+                        I have supported campaign execution, keyword research, performance reporting and basic automation setup.
+                        I’m particularly interested in helping growing companies turn their content, data and channels into
+                        measurable results.
+                    </p>
+                </section>
 
-<footer>
-    © 2025 – Portfolio Website by Sanket Pophale
-</footer>
+                <section class="section-card">
+                    <h2 class="section-title">Experience</h2>
+                    <p class="section-subtitle">Selected roles related to digital marketing and brand growth.</p>
+
+                    <div class="experience-item">
+                        <div class="experience-role">Marketing Consultant – MyImmune</div>
+                        <div class="experience-meta">Dublin · CRM workflows · SEO updates · Content support</div>
+                        <p class="experience-text">
+                            Assisted with HubSpot CRM setup, basic automation, website content clean-up and SEO-focused updates,
+                            along with digital content creation aligned to product messaging.
+                        </p>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-role">Digital Marketing Intern – ISKCON Dublin</div>
+                        <div class="experience-meta">Dublin · Google Ad Grants · Event promotion</div>
+                        <p class="experience-text">
+                            Helped manage Google Ad Grants campaigns through keyword optimisation, ad copy iterations and simple
+                            performance reporting to support non-profit outreach and event promotion.
+                        </p>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-role">Digital Marketing Intern – STUVALLEY Technology</div>
+                        <div class="experience-meta">Pune · SEO · Paid campaigns · Analytics</div>
+                        <p class="experience-text">
+                            Supported SEO, SEM and paid social activities, including keyword research, on-page optimisation and
+                            building Power BI views to monitor campaign performance.
+                        </p>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-role">Retail & Event Support – FMI / Circle K / Aramark</div>
+                        <div class="experience-meta">Dublin · Merchandising · Promotions · Customer insights</div>
+                        <p class="experience-text">
+                            Worked on in-store merchandising, seasonal promotions and event-based brand activations, gaining
+                            practical insight into customer behaviour, product positioning and store-level execution.
+                        </p>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <aside>
+
+                <section class="section-card">
+                    <h2 class="section-title">Core Skills</h2>
+                    <p class="section-subtitle">Tools and capabilities I use most often.</p>
+                    <div class="skills-grid">
+                        <div class="skill-pill">Digital Marketing</div>
+                        <div class="skill-pill">Social Media Marketing</div>
+                        <div class="skill-pill">Content Creation</div>
+                        <div class="skill-pill">Email Marketing</div>
+                        <div class="skill-pill">SEO</div>
+                        <div class="skill-pill">Google Analytics (GA4)</div>
+                        <div class="skill-pill">CRM (HubSpot)</div>
+                        <div class="skill-pill">Google Ads</div>
+                        <div class="skill-pill">Meta Ads</div>
+                        <div class="skill-pill">Power BI</div>
+                    </div>
+                </section>
+
+                <section class="section-card">
+                    <h2 class="section-title">Portfolio Links</h2>
+                    <p class="section-subtitle">Detailed work samples and creative assets.</p>
+                    <ul class="link-list">
+                        <li>
+                            <strong>Notion Portfolio</strong>
+                            <span class="pill-small">Strategy · Content · Email</span><br>
+                            <a href="https://awake-muenster-42d.notion.site/Marketing-Portfolio-Sanket-Pophale-2c21c52c97fc80da9f2ccc1a41f5a48b" target="_blank">
+                                Marketing Portfolio – SaaS content calendar, email sample and 1-page strategy
+                            </a>
+                        </li>
+                        <li>
+                            <strong>Creative Assets Folder</strong>
+                            <span class="pill-small">Design · Social Posts</span><br>
+                            <a href="https://drive.google.com/drive/folders/1zOOuxweGyvyQ8_nUb5qBll5fgi97hDm0" target="_blank">
+                                Selected social media and marketing creatives (Google Drive)
+                            </a>
+                        </li>
+                        <li>
+                            <strong>LinkedIn Profile</strong><br>
+                            <a href="https://www.linkedin.com/in/sanketp99/" target="_blank">
+                                linkedin.com/in/sanketp99
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="section-card">
+                    <h2 class="section-title">Contact</h2>
+                    <p class="section-subtitle">Open to Marketing Assistant / Digital Marketing Executive roles in Ireland.</p>
+                    <p style="font-size:14px;">
+                        Email: <strong>sanket.pophale99@gmail.com</strong><br>
+                        Location: Dublin, Ireland<br>
+                        Visa: Stamp 1G (graduate, full-time eligible)
+                    </p>
+                </section>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer>
+        © 2025 · Digital Marketing Portfolio – Sanket Pophale
+    </footer>
 
 </body>
 </html>
