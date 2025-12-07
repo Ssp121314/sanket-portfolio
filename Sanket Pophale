@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanket Pophale – Digital Marketing Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fc;
+            color: #222;
+        }
+        header {
+            background: linear-gradient(135deg, #5a60f5, #8b4df9);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+        h2 {
+            color: #444;
+        }
+        .container {
+            width: 85%;
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 0;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+        }
+        .skill-box {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        a.button {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #6c63ff;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ececff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sanket Pophale</h1>
+    <p>Junior Digital Marketer | Social Media • SEO • Email • CRM | Dublin</p>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>About Me</h2>
+        <p>
+            Entry-level digital marketer with hands-on experience in social media, SEO, CRM workflows, email marketing, 
+            and analytics. Skilled in campaign execution, content creation, and performance reporting. Actively seeking 
+            Marketing Assistant / Digital Marketing Executive roles across Ireland.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Key Skills</h2>
+        <div class="skills">
+            <div class="skill-box">Digital Marketing</div>
+            <div class="skill-box">Social Media Marketing</div>
+            <div class="skill-box">Email Marketing</div>
+            <div class="skill-box">SEO</div>
+            <div class="skill-box">Google Analytics (GA4)</div>
+            <div class="skill-box">CRM (HubSpot)</div>
+            <div class="skill-box">Content Creation</div>
+            <div class="skill-box">Google Ads</div>
+            <div class="skill-box">Meta Ads</div>
+            <div class="skill-box">Power BI</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Portfolio</h2>
+        <p>You can view my full marketing portfolio including content calendar, email samples, and SaaS strategy here:</p>
+        <a class="button" href="YOUR_NOTION_LINK_HERE" target="_blank">View Portfolio</a>
+    </div>
+
+    <div class="section">
+        <h2>Experience</h2>
+        <p><strong>MyImmune – Marketing Consultant</strong> (CRM workflows, SEO updates, content creation)</p>
+        <p><strong>ISKCON Dublin – Digital Marketing Intern</strong> (Google Ads Grants, keyword optimisation)</p>
+        <p><strong>STUVALLEY – Digital Marketing Intern</strong> (SEO, paid campaigns, analytics)</p>
+        <p><strong>FMI / Circle K / Aramark</strong> – Marketing Support, customer insights, promotional execution</p>
+    </div>
+
+    <div class="section">
+        <h2>Contact</h2>
+        <p>Email: sanket.pophale99@gmail.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/sanketp99" target="_blank">linkedin.com/in/sanketp99</a></p>
+        <p>Dublin, Ireland</p>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 – Portfolio by Sanket Pophale
+</footer>
+
+</body>
+</html>
