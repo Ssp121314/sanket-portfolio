@@ -12,180 +12,196 @@
 
     body {
         font-family: 'Poppins', sans-serif;
-        background: #f4f5ff;
-        color: #222;
+        background: #f3f4ff;
+        color: #111827;
         line-height: 1.6;
     }
 
-    /* NAVIGATION */
+    a { text-decoration: none; color: #4f46e5; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 18px 80px;
-        background: #ffffffcc;
+        padding: 16px 80px;
+        background: #ffffffdd;
         backdrop-filter: blur(10px);
         position: sticky;
         top: 0;
         z-index: 1000;
     }
-    nav .logo {
+    .logo {
         font-size: 20px;
         font-weight: 700;
         color: #4f46e5;
     }
-    nav a {
+    nav a.nav-link {
         margin-left: 24px;
+        font-size: 14px;
         font-weight: 500;
         color: #4f46e5;
-        text-decoration: none;
     }
-    nav a:hover { text-decoration: underline; }
 
-    /* HERO SECTION */
+    /* HERO */
     .hero {
-        padding: 50px 40px 30px;
+        padding: 52px 80px 36px;
         background: radial-gradient(circle at 20% 20%, #8b5cf6 0%, #5b4fed 45%, #322e97 100%);
-        color: white;
+        color: #fff;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 36px;
         align-items: center;
     }
-
-    .hero h1 {
-        font-size: 46px;
+    .hero-title {
+        font-size: 40px;
         font-weight: 700;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
     }
-
-    .hero p {
+    .hero-sub {
         font-size: 16px;
-        max-width: 480px;
-    }
-
-    .hero-buttons { margin-top: 22px; }
-
-    .btn-primary, .btn-outline {
-        display: inline-block;
-        padding: 14px 28px;
-        border-radius: 999px;
-        font-weight: 600;
-        font-size: 15px;
-        margin-right: 12px;
-        text-decoration: none;
-    }
-
-    .btn-primary {
-        background: white;
-        color: #111;
-    }
-
-    .btn-primary:hover {
-        background: #f0f0f0;
-    }
-
-    .btn-outline {
-        border: 2px solid #fff;
-        color: white;
-    }
-
-    .hero img {
-        width: 100%;
-        border-radius: 14px;
-        box-shadow: 0 12px 28px rgba(0,0,0,0.2);
-        margin-right: 20px;
-    }
-
-    /* MAIN SECTIONS */
-    .section {
-        max-width: 1000px;
-        margin: 24px auto;
-        background: white;
-        padding: 32px;
-        border-radius: 18px;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.06);
-    }
-
-    .section h2 {
-        font-size: 28px;
         margin-bottom: 14px;
+    }
+    .hero-text {
+        font-size: 14px;
+        max-width: 460px;
+        color: #e5e7ff;
+    }
+    .hero-buttons { margin-top: 20px; }
+    .btn {
+        display: inline-block;
+        padding: 12px 26px;
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-right: 10px;
+    }
+    .btn-primary {
+        background: #fff;
+        color: #111827;
+    }
+    .btn-primary:hover { background: #f3f4f6; }
+    .btn-outline {
+        border: 2px solid #e5e7ff;
+        color: #e5e7ff;
+    }
+    .btn-outline:hover { background: rgba(15,23,42,.18); }
+
+    .hero-img-wrap {
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 16px 40px rgba(0,0,0,.25);
+    }
+    .hero-img-wrap img {
+        width: 100%;
+        display: block;
+    }
+
+    /* MAIN LAYOUT */
+    .page {
+        max-width: 1100px;
+        margin: 20px auto 60px;
+        padding: 0 24px;
+    }
+    .section {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 12px 36px rgba(15,23,42,.06);
+        padding: 26px 30px;
+        margin-bottom: 20px;
+    }
+    .section h2 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    .section-sub {
+        font-size: 13px;
+        color: #6b7280;
+        margin-bottom: 14px;
+    }
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: 2fr 1.3fr;
+        gap: 18px;
     }
 
     /* SKILLS */
     .skills-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
-        gap: 12px;
-        margin-top: 10px;
+        grid-template-columns: repeat(auto-fit,minmax(130px,1fr));
+        gap: 10px;
+        margin-top: 6px;
     }
-
     .skill-pill {
         background: #eef2ff;
-        padding: 12px 16px;
+        border: 1px solid #e2e7ff;
+        padding: 10px 14px;
         text-align: center;
         border-radius: 999px;
+        font-size: 13px;
         font-weight: 500;
         color: #4338ca;
-        border: 1px solid #e2e7ff;
     }
 
-    /* PORTFOLIO */
+    /* PORTFOLIO CARDS */
     .gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-        gap: 20px;
-        max-width: 900px;
-        margin: 20px auto 0;
+        grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+        gap: 18px;
+        margin-top: 16px;
     }
-
     .gallery-item {
+        border-radius: 14px;
+        overflow: hidden;
         background: #fff;
-        padding: 12px;
-        border-radius: 12px;
-        box-shadow: 0 10px 28px rgba(0,0,0,0.08);
-        transition: 0.3s ease;
+        box-shadow: 0 10px 30px rgba(15,23,42,.08);
+        transition: .25s ease;
     }
-
-    .gallery-item:hover { transform: translateY(-5px); }
-
-    .gallery img {
+    .gallery-item:hover { transform: translateY(-4px); }
+    .gallery-item img {
         width: 100%;
-        border-radius: 12px;
+        display: block;
+    }
+    .gallery-caption {
+        padding: 10px 12px 12px;
+        font-size: 13px;
+    }
+    .tag {
+        display: inline-block;
+        font-size: 11px;
+        padding: 3px 8px;
+        border-radius: 999px;
+        background: #ecfeff;
+        color: #0369a1;
+        margin-left: 4px;
     }
 
     /* CONTACT */
-    .contact-box {
-        max-width: 600px;
-        margin: 40px auto;
-        background: white;
-        padding: 30px;
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        line-height: 1.8;
-        font-size: 15px;
+    .contact-list p {
+        margin-bottom: 6px;
+        font-size: 14px;
     }
 
-    /* FOOTER */
     footer {
         text-align: center;
-        padding: 20px;
-        margin-top: 60px;
-        font-size: 14px;
-        color: #6b6b6b;
+        font-size: 13px;
+        color: #6b7280;
+        padding: 18px 0 26px;
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 850px) {
+    html { scroll-behavior: smooth; }
+
+    @media(max-width:900px) {
+        nav { padding: 14px 20px; }
         .hero {
+            padding: 36px 20px 26px;
             grid-template-columns: 1fr;
-            text-align: center;
         }
-        nav {
-            padding: 18px 30px;
-        }
+        .page { padding: 0 16px; }
+        .grid-2 { grid-template-columns: 1fr; }
     }
-
 </style>
 </head>
 
@@ -194,103 +210,132 @@
 <nav>
     <div class="logo">Sanket Pophale</div>
     <div>
-        <a href="#home">Home</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#portfolio">Portfolio</a>
+        <a class="nav-link" href="#contact">Contact</a>
     </div>
 </nav>
 
-<!-- HERO -->
 <section id="home" class="hero">
     <div>
-        <h1>Junior Digital Marketer</h1>
-        <p>Social Media • SEO • Email Marketing • CRM • Analytics</p>
-
+        <h1 class="hero-title">Junior Digital Marketer</h1>
+        <p class="hero-sub">Social Media · SEO · Email Marketing · CRM · Analytics</p>
+        <p class="hero-text">
+            Entry-level digital marketer with hands-on experience in social media strategy, SEO, email campaigns,
+            CRM workflows (HubSpot), Google Ads Grants and performance reporting for SaaS, non-profit and retail brands.
+        </p>
         <div class="hero-buttons">
-            <a class="btn-primary" href="#portfolio">View Portfolio</a>
-            <a class="btn-outline" href="https://www.linkedin.com/in/sanketp99/" target="_blank">LinkedIn</a>
+            <a class="btn btn-primary" href="#portfolio">View Portfolio</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/sanketp99/" target="_blank">LinkedIn</a>
         </div>
     </div>
 
-    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d34?auto=format&fit=crop&w=900&q=80" alt="">
+    <div class="hero-img-wrap">
+        <!-- BBQ campaign creative as hero -->
+        <img src="assets/bbq-ad.png" alt="BBQ social media campaign creative">
+    </div>
 </section>
 
-<!-- ABOUT SECTION -->
-<div class="section">
-    <h2>About Me</h2>
-    <p>
-        I am an entry-level digital marketer with experience in social media strategy, SEO optimisation,
-        email marketing, CRM workflows (HubSpot), Google Ads Grants and analytics. I combine creative execution 
-        with data-driven decision-making to support marketing goals for SaaS, non-profit and retail brands.
-    </p>
-</div>
+<main class="page">
 
-<!-- SKILLS SECTION -->
-<div class="section">
-    <h2>Core Skills</h2>
-    <div class="skills-grid">
-        <div class="skill-pill">Social Media</div>
-        <div class="skill-pill">SEO</div>
-        <div class="skill-pill">Email Marketing</div>
-        <div class="skill-pill">CRM (HubSpot)</div>
-        <div class="skill-pill">Content Creation</div>
-        <div class="skill-pill">Google Ads</div>
-        <div class="skill-pill">GA4</div>
-        <div class="skill-pill">Meta Ads</div>
-        <div class="skill-pill">Power BI</div>
+    <div class="grid-2">
+
+        <!-- LEFT COLUMN -->
+        <div>
+
+            <section class="section">
+                <h2>About Me</h2>
+                <p class="section-sub">Digital marketing generalist focused on execution and measurable impact.</p>
+                <p style="font-size:14px;">
+                    I support brands with channel-ready content, basic funnel strategy and performance tracking. My work
+                    includes social content calendars, email journeys, SaaS-focused messaging, campaign setup and light
+                    analytics using GA4 and Power BI. I’m based in Dublin and open to Marketing Assistant and Digital
+                    Marketing Executive roles across Ireland.
+                </p>
+            </section>
+
+            <section id="portfolio" class="section">
+                <h2>Portfolio</h2>
+                <p class="section-sub">Selected projects across branding, social media and campaigns.</p>
+
+                <p style="font-size:14px;">
+                    <strong>Full Notion Portfolio</strong><br>
+                    <a href="https://awake-muenster-42d.notion.site/Marketing-Portfolio-Sanket-Pophale-2c21c52c97fc80da9f2ccc1a41f5a48b" target="_blank">
+                        Strategy, content calendar and email marketing sample
+                    </a>
+                </p>
+
+                <p style="font-size:14px;margin-top:8px;">
+                    <strong>Creative Assets (Google Drive)</strong><br>
+                    <a href="https://drive.google.com/drive/folders/1zOOuxweGyvyQ8_nUb5qBll5fgi97hDm0" target="_blank">
+                        Full set of social, display and branding creatives
+                    </a>
+                </p>
+
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="assets/zero-logo.png" alt="Zero Creations logo">
+                        <div class="gallery-caption">
+                            Zero Creations – minimalist logo and visual mark for a creative brand.
+                            <span class="tag">Branding</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/bbq-ad.png" alt="BBQ social campaign ad">
+                        <div class="gallery-caption">
+                            BBQ skills Facebook campaign encouraging UGC video submissions for a retail brand.
+                            <span class="tag">Paid Social</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/nutriharvest.png" alt="NutriHarvest snack brand creative">
+                        <div class="gallery-caption">
+                            NutriHarvest – snack brand Instagram-style layout focused on healthy lifestyle storytelling.
+                            <span class="tag">Content Design</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <aside>
+
+            <section class="section">
+                <h2>Core Skills</h2>
+                <p class="section-sub">Tools and capabilities I use most frequently.</p>
+                <div class="skills-grid">
+                    <div class="skill-pill">Social Media</div>
+                    <div class="skill-pill">SEO</div>
+                    <div class="skill-pill">Email Marketing</div>
+                    <div class="skill-pill">CRM (HubSpot)</div>
+                    <div class="skill-pill">Content Creation</div>
+                    <div class="skill-pill">Google Ads</div>
+                    <div class="skill-pill">GA4</div>
+                    <div class="skill-pill">Meta Ads</div>
+                    <div class="skill-pill">Power BI</div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h2>Contact</h2>
+                <p class="section-sub">Available for junior digital marketing roles in Ireland.</p>
+                <div class="contact-list">
+                    <p><strong>Email:</strong> sanket.pophale99@gmail.com</p>
+                    <p><strong>LinkedIn:</strong>
+                        <a href="https://www.linkedin.com/in/sanketp99/" target="_blank">linkedin.com/in/sanketp99</a>
+                    </p>
+                    <p><strong>Location:</strong> Dublin, Ireland</p>
+                    <p><strong>Visa:</strong> Stamp 1G (full-time eligible)</p>
+                </div>
+            </section>
+
+        </aside>
+
     </div>
-</div>
 
-<!-- PORTFOLIO SECTION -->
-<div id="portfolio" class="section">
-    <h2>Portfolio</h2>
-    <p>Marketing strategy, content design, creative execution & analytics insights.</p>
-
-    <p><strong>Full Notion Portfolio:</strong><br>
-    <a href="https://awake-muenster-42d.notion.site/Marketing-Portfolio-Sanket-Pophale-2c21c52c97fc80da9f2ccc1a41f5a48b" target="_blank">
-        👉 Open Notion Portfolio
-    </a></p>
-
-    <p><strong>Creative Assets (Google Drive):</strong><br>
-    <a href="https://drive.google.com/drive/folders/1zOOuxweGyvyQ8_nUb5qBll5fgi97hDm0" target="_blank">
-        👉 Open Creative Designs
-    </a></p>
-
-    <h3 style="margin-top:22px;">Recent Work Previews</h3>
-
-    <div class="gallery">
-
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80">
-            <p>Social media creative concept (placeholder)</p>
-        </div>
-
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1507209696998-3c532be9b2b4?auto=format&fit=crop&w=800&q=80">
-            <p>Email marketing visual sample (placeholder)</p>
-        </div>
-
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80">
-            <p>Marketing strategy visual asset (placeholder)</p>
-        </div>
-
-    </div>
-</div>
-
-<!-- CONTACT SECTION -->
-<div id="contact" class="contact-box">
-    <h2>Contact Me</h2>
-    <p>Open to Digital Marketing & Marketing Assistant roles across Ireland.</p>
-
-    <p><strong>Email:</strong> sanket.pophale99@gmail.com</p>
-    <p><strong>LinkedIn:</strong> 
-        <a href="https://www.linkedin.com/in/sanketp99/" target="_blank">linkedin.com/in/sanketp99</a>
-    </p>
-
-    <p><strong>Location:</strong> Dublin, Ireland</p>
-    <p><strong>Visa:</strong> Stamp 1G (full-time eligible)</p>
-</div>
+</main>
 
 <footer>
     © 2025 · Sanket Pophale · Digital Marketing Portfolio
